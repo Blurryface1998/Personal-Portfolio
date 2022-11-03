@@ -1,0 +1,120 @@
+@use "../util" as *;
+
+.header {
+    margin: rem(15) rem(10);
+
+    &__descript {
+        text-align: center;
+
+        h1 {
+            font-size: rem(20);
+        }
+
+        span {
+            
+        }
+    }
+}
+
+.main {
+    .card {
+        margin: rem(10);
+
+        &__about {
+            margin-bottom: rem(15);
+
+            h2 {
+                margin-bottom: rem(15);
+            }
+        }
+
+        &__projects {
+            text-align: center;
+            
+            h3 {
+              text-align: start;
+              margin-bottom: rem(15);  
+            }
+
+            &--webDev {
+                position: relative;
+                display: inline-block;
+
+                .dropdownOne {
+                    background-color: #3498DB;
+                    color: white;
+                    padding: rem(16);
+                    font-size: rem(18);
+                    border: none;
+                    cursor: pointer;
+                }
+
+                .content {
+                    display: none;
+                    position: absolute;
+                    background-color: #f1f1f1;
+                    min-width: 160px;
+                    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                    z-index: 1;
+
+                    a {
+                        color: black;
+                        padding: 12px 16px;
+                        text-decoration: none;
+                        display: block;
+                    }
+                }
+            }
+
+            &--gameDev {
+                position: relative;
+                display: inline-block;
+                
+                .dropdownTwo {
+                    background-color: #3498DB;
+                    color: white;
+                    padding: rem(16);
+                    font-size: rem(18);
+                    border: none;
+                    cursor: pointer;
+                }
+                .content {
+                    display: none;
+                    position: absolute;
+                    background-color: #f1f1f1;
+                    min-width: 160px;
+                    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                    z-index: 1;
+                }
+
+            }
+
+            .show {
+                display:block;
+            }
+        }
+    }
+}
+
+.footer {
+    margin: rem(15) rem(10);
+    position: relative;
+    height: 170px;
+
+    &__socials {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__copy {
+       position: absolute;
+       bottom: 0;
+       right: 0;
+       
+        span {
+            
+        }
+    }
+}

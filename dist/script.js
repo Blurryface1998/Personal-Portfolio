@@ -1,2 +1,2 @@
-"use strict";console.log("Hello World");
+"use strict";var dropdownOne=document.querySelector(".dropdownOne"),dropdownTwo=document.querySelector(".dropdownTwo"),myDropdownOne=document.getElementById("myDropdownOne"),myDropdownTwo=document.getElementById("myDropdownTwo");dropdownOne.addEventListener("click",(function(){myDropdownOne.classList.toggle("show")})),dropdownTwo.addEventListener("click",(function(){myDropdownTwo.classList.toggle("show")})),window.addEventListener("click",(function(o){o.target!=dropdownOne&&myDropdownOne.classList.remove("show"),o.target!=dropdownTwo&&myDropdownTwo.classList.remove("show")}));
 //# sourceMappingURL=script.js.map
