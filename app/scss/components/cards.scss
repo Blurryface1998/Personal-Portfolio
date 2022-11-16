@@ -1,120 +1,258 @@
 @use "../util" as *;
 
 .header {
-    margin: rem(15) rem(10);
+    padding: rem(15) rem(10);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--darkPurple);
+
+    @include breakpoint(medium) {
+        flex-direction: row-reverse;
+    }
+    
+    &__image {
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 50%;
+            border: 2px solid var(--lightGray);
+
+            @include breakpoint(medium) {
+                border: none;
+                border-radius: 0;
+                margin-left: rem(25);
+            }
+        }
+    }
 
     &__descript {
-        text-align: center;
+        padding-left: rem(10);
+        text-align: start;
 
+        @include breakpoint(large) {
+            padding-left: 0;
+            text-align: right;
+        }
         h1 {
             font-size: rem(20);
+            color: var(--lightGray);
         }
 
         span {
-            
+            font-size: rem(16);
+            color: var(--grayishWhite);
         }
     }
 }
 
 .main {
+
+    @include breakpoint(medium) {
+        margin: rem(25);
+    }
+
     .card {
-        margin: rem(10);
+        margin: rem(15);
 
         &__about {
             margin-bottom: rem(15);
 
             h2 {
                 margin-bottom: rem(15);
+                color: var(--lightGray);
+            }
+
+            p {
+                color: var(--grayishWhite);
             }
         }
 
         &__projects {
-            text-align: center;
             
+
+
             h3 {
               text-align: start;
               margin-bottom: rem(15);  
+              color: var(--lightGray);
+              font-size: rem(18);
             }
 
-            &--webDev {
-                position: relative;
-                display: inline-block;
+            &--projects {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                
 
-                .dropdownOne {
-                    background-color: #3498DB;
-                    color: white;
-                    padding: rem(16);
-                    font-size: rem(18);
-                    border: none;
-                    cursor: pointer;
+                
+                @include breakpoint(medium) {
+                    align-items: center;
+                    width: 90%;
+                    margin: auto;
+                    border-radius: rem(10);
+                    padding: rem(15);
+                    box-shadow: 0px 5px 20px 0px rgba(255, 255, 255, 0.127);
+                    background-color: var(--blue-mediumS);
                 }
-
-                .content {
-                    display: none;
-                    position: absolute;
-                    background-color: #f1f1f1;
-                    min-width: 160px;
-                    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-                    z-index: 1;
-
+                    
+                .container {
+                    margin-bottom: rem(15);
+                    flex: 50%;
+                    max-width: 50%;
+                    padding: 0 rem(8);
+                
+                    @include breakpoint(medium) {
+                        position: relative;
+                        flex: 33.3%;
+                        max-width: 33.3%;
+                            
+                        &:hover {
+                            transform: scale(1.08);
+                            z-index: 1;
+                            transition: transform 0.3s ease;
+                        }   
+                    }
+                    
                     a {
-                        color: black;
-                        padding: 12px 16px;
                         text-decoration: none;
-                        display: block;
+
+                        img {
+                            max-width: 100%;
+                            height: auto;
+                            margin-top: rem(8);
+                            box-shadow: 0px -10px 20px -5px #000000;
+                            border-top-left-radius: rem(5);
+                            border-top-right-radius: rem(5);
+                            
+                            @include breakpoint(medium) {
+                                border-radius: rem(5);
+                                box-shadow: none;
+
+                                &:hover {
+                                    box-shadow: 0px 5px 20px 0px #000000;
+                                    transition: box-shadow 0.3s ease;
+                                }
+                            }
+                        }
+
+                        @include breakpoint(medium) {
+                            
+                            &:hover + .descript {
+                                opacity: 1;
+                          
+                            }
+                        }
+                          
+                    }
+
+                    .descript {
+                        padding: rem(5);
+                        margin-top: rem(-4);
+                        text-align: center;
+                        font-size: rem(14);
+                        border-bottom-left-radius: rem(5);
+                        border-bottom-right-radius: rem(5);
+                        background-color: var(--darkPurple);
+                        color: var(--textColor2);
+                        z-index: 1;
+                        box-shadow: 0px 0px 20px 2px #000000;
+                        
+                        @include breakpoint(medium) {
+                            position: absolute;
+                            bottom: 4px;
+                            width: calc(100% - 16px);
+                            height: 40px;
+                            font-size: rem(16);
+                            padding: 0;
+                            background-color: rgba(0, 0, 0, 0.5);
+                            opacity: 0;
+                            transition: opacity 0.3s ease;
+                            pointer-events: none;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            box-shadow: none;
+                        }
+                    }
+
+                    &:nth-child(9) {
+                       
+
+                        @include breakpoint(medium) {
+                            a {
+                                img {
+                                    
+                                }
+                            }
+                        }
+                    }
+
+                    &:nth-child(10) {
+
+                        @include breakpoint(medium) {
+                            
+                        }
                     }
                 }
-            }
-
-            &--gameDev {
-                position: relative;
-                display: inline-block;
-                
-                .dropdownTwo {
-                    background-color: #3498DB;
-                    color: white;
-                    padding: rem(16);
-                    font-size: rem(18);
-                    border: none;
-                    cursor: pointer;
-                }
-                .content {
-                    display: none;
-                    position: absolute;
-                    background-color: #f1f1f1;
-                    min-width: 160px;
-                    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-                    z-index: 1;
-                }
-
-            }
-
-            .show {
-                display:block;
             }
         }
     }
 }
 
 .footer {
-    margin: rem(15) rem(10);
+    padding: rem(15) rem(10);
     position: relative;
     height: 170px;
+    background-color: var(--darkPurple);
 
-    &__socials {
+    &__social {
+        font-size: rem(16);
+        text-align: center;
+        color: var(--lightGray);
+    } 
+
+    &__links {
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        
+        a {
+            text-decoration: none;
+            color: var(--textColor2);
+            margin-right: rem(10);
+
+            span {
+                font-size: rem(20);
+                transition: all 0.2s ease;
+            }
+
+            .bi-github {
+                color: var(--githubIcon);
+
+                &:hover {
+                    color: var(--githubIcon-hover);
+                }
+            }
+
+            .bi-linkedin {
+                color: var(--linkedinIcon);
+
+                &:hover {
+                    color: var(--linkedinIcon-hover);
+                }
+            }
+
+        }
     }
 
     &__copy {
        position: absolute;
        bottom: 0;
        right: 0;
-       
-        span {
-            
-        }
+       padding-bottom: rem(10);
+       padding-right: rem(10);
+       color: var(--textColor);
     }
 }
