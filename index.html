@@ -4,18 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal Portfolio">
+    <meta name="keyword" content="portfolio, developer">
     <title>Personal Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.svg">
+
     <!-- Styles and Scripts: -->
     <link rel="stylesheet" href="dist/style.css">
     <script defer src="dist/script.js"></script>
 
     <!-- Bootsrap icons: -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+
+    <!-- Google Fonts: -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="header">
+    <header class="header" id="header">
         <div class="header__image">
-            <img src="images/author-Mobile.jpeg" alt="author of the web page" width="150" height="150">
+            <img src="images/author.jpg" alt="author of the web page" width="250" height="250">
         </div>
         <div class="header__descript">
             <h1>Hello, my name is Djordje!</h1>
@@ -25,71 +34,71 @@
 
     <main class="main">
         <div class="card">
-            <div class="card__about">
-                <h2>About me:</h2>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis quaerat exercitationem vitae necessitatibus voluptate itaque sapiente nam dolores inventore nostrum corrupti repellat sed aspernatur in similique unde, ex commodi reprehenderit.
-                Quod, ducimus, quaerat tempore praesentium doloribus, modi perferendis nihil veritatis distinctio asperiores enim quisquam itaque at aperiam nobis expedita? Libero fugiat eum voluptatum minus cupiditate doloribus ut illo sit eaque.</p>
+            <div class="card__about" id="about">
+                <div class="card__about--aboutMe">
+                    <h2>About me:</h2>
+                    <p>I'm from Serbia and I finished Medical High School in Cuprija in 2017. I did volunteer work for six months and got my medical license as a practical nurse but realized it was not for me. I like programming and I'm trying to be good at it. Finished HTML, and CSS course on Freecodecamp, learned JavaScript and SCSS from W3School and all my projects are from <a href="https://www.frontendmentor.io/home" target="_blank">Frontend Mentor</a>. Hopefully, you liked my website. I will update this page as soon as I learn something new!</p>
+                </div>
+               
             </div>
 
-            <div class="card__projects">
+            <div class="card__projects" id="projects">
                 <h3>My Projects:</h3>
                 
                 <div class="card__projects--projects">
                         <div class="container">
-                            <a href="#" target="_blank"><img class="image" src="images/Time-Tracking-Dashbord.jpg" alt="Time Tracking web page project created by author of this page" width="100%"></a>
+                            <a href="https://blurryface1998.github.io/time-tracking-dashboard-main/" target="_blank"><img class="image" src="images/Time-Tracking-Dashbord.jpg" alt="Time Tracking web page project created by author of this page" width="100%"></a>
                             <div class="descript">
                                 <span>Time Tracking Dashbord Project</span>
                             </div>
                         </div>
                         <div class="container">
-                            <a href="#" target="_blank"><img src="images/Social-Media-Dashbord.jpg" alt="Social Media Dashbor web page project created by author of this page"  width="100%"></a>
+                            <a href="https://blurryface1998.github.io/social-media-dashboard-with-theme-switcher-master/" target="_blank"><img src="images/Social-Media-Dashbord.jpg" alt="Social Media Dashbor web page project created by author of this page" width="100%"></a>
                             <div class="descript">Social Media Dashbord Project</div>
                         </div>
                         <div class="container">
-                            <a href="#" target="_blank"><img src="images/Article-Preview.jpg" alt="Article Preview web page project created by author of this page"  width="100%"></a>
+                            <a href="https://blurryface1998.github.io/article-preview-component-master/" target="_blank"><img src="images/Article-Preview.jpg" alt="Article Preview web page project created by author of this page" width="100%"></a>
                             <div class="descript">Article Preview Project</div>
                         </div>
 
                         
                         <div class="container">
-                            <a href="#" target="_blank"><img src="images/interactive-pricing-component.jpg" alt="interactive pricing component wep bage project created by author of this page"  width="100%"></a>
+                            <a href="https://blurryface1998.github.io/interactive-pricing-component-main/" target="_blank"><img src="images/interactive-pricing-component.jpg" alt="interactive pricing component wep bage project created by author of this page" width="100%"></a>
                             <div class="descript">Interactive Pricing Component Project</div>
                         </div>
-                        <div class="container">
-                            <a href="#" target="_blank"><img src="images/expenses-chart.jpg" alt="expenses chart wev page project created by author of this page"  width="100%"></a>
-                            <div class="descript">Expenses Chart Project</div>
-                        </div>
-                        
-
-                        <div class="container">
-                            <a href="#" target="_blank"><img src="images/nft-preview-card.png" alt="nft preview card web page project created by author of this page"  width="100%"></a>
-                            <div class="descript">NFT Preview Card Project</div>
-                        </div>
-                       
                         
                         <div class="container">
-                            <a href="#" target="_blank"><img src="images/advice-generator.jpg" alt="advice generator web aplication project created by author of this page" width="100%"></a>
+                            <a href="https://blurryface1998.github.io/advice-generator-app-main/" target="_blank"><img src="images/advice-generator.jpg" alt="advice generator web aplication project created by author of this page" width="100%"></a>
                             <div class="descript">Advice Generator Project</div>
                         </div>
                         
                         <div class="container">
-                            <a href="#" target="_blank"><img src="images/crowfunding-product-page.jpg" alt="crowfunding product web page project created by author of this page" width="100%"></a>
+                            <a href="https://blurryface1998.github.io/crowdfunding-product-page-main/" target="_blank"><img src="images/crowfunding-product-page.jpg" alt="crowfunding product web page project created by author of this page" width="100%"></a>
                             <div class="descript">Crowdfunding Product Page Project</div>
                         </div>
 
                         
                         <div class="container">
-                            <a href="#" target="_blank"><img src="images/fylo-landing-page.jpg" alt="fylo laning web page project created by author of this page"  width="100%"></a>
+                            <a href="https://blurryface1998.github.io/fylo-landing-page-with-two-column-layout-master/" target="_blank"><img src="images/fylo-landing-page.jpg" alt="fylo laning web page project created by author of this page" width="100%"></a>
                             <div class="descript">Fylo Landing Page Project</div>
                         </div>
                        
                         
                         <div class="container">
-                            <a href="#" target="_blank"><img src="images/base-apparel-cm-page.jpg" alt="base apperal coming soon web page project created by author of this page" width="100%"></a>
+                            <a href="https://blurryface1998.github.io/Base-Apparel-coming-soon-page/" target="_blank"><img src="images/base-apparel-cm-page.jpg" alt="base apperal coming soon web page project created by author of this page" width="100%"></a>
                             <div class="descript">Base Apparel Coming Soon Project</div>
                         </div>
-                       
+
+                        <div class="container">
+                            <a href="https://blurryface1998.github.io/expenses-chart-component-main/" target="_blank"><img src="images/expenses-chart.jpg" alt="expenses chart web page project created by author of this page" width="100%"></a>
+                            <div class="descript">Expenses Chart Project</div>
+                        </div>
                         
+
+                        <div class="container">
+                            <a href="https://blurryface1998.github.io/NFT-preview-card-component/" target="_blank"><img src="images/nft-preview-card.jpg" alt="nft preview card web page project created by author of this page" width="100%"></a>
+                            <div class="descript">NFT Preview Card Project</div>
+                        </div>
                 </div>
             </div>
         </div>
@@ -97,16 +106,25 @@
 
     <footer class="footer">
 
-        <div class="footer__social">
-            <h4>Find me on:</h4>    
-        </div>
-        <div class="footer__links">
-            <a href="" target="_blank"><span class="bi bi-github"></span></a>
-            <a href="" target="_blank"><span class="bi bi-linkedin"></span></a>
+        <div class="footer__goto">
+            <ul>
+                <li><a href="#header">Top</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">My Projects</a></li>
+            </ul>
         </div>
 
+        <div class="footer__social">
+            <div class="links">
+                <a href="https://github.com/Blurryface1998" target="_blank"><span class="bi bi-github" title="github link"></span></a>
+                <a href="https://www.linkedin.com/in/djordje-rajc-6925b2194/" target="_blank"><span class="bi bi-linkedin" title="linkedin link"></span></a>
+                <a href="https://www.frontendmentor.io/profile/Blurryface1998" target="_blank"><img src="images/frontendmentori-Icon.jpg" alt="frontednMentor Icon link" width="22" height="22"></a>
+            </div>
+        </div>
+        
+
         <div class="footer__copy">
-            <span>Created by: Djordje Rajc</span>
+            <span>&#169;Copyright 2022, Djordje Rajc</span>
         </div>
     </footer>
     
