@@ -15,12 +15,9 @@
         img {
             max-width: 100%;
             height: auto;
-            border-radius: 50%;
-            border: 2px solid var(--lightGray);
+            border-radius: rem(8);
 
             @include breakpoint(medium) {
-                border: none;
-                border-radius: rem(8);
                 margin-left: rem(15);
             }
         }
