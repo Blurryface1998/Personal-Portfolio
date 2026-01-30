@@ -1,15 +1,16 @@
-:root {    
-    --veryDarkBlue-BG:hsl(213, 73%, 15%);
-    --veryDarkBlue-TopBGPattern:  hsl(240, 28%, 14%);
-    --darkDesaturatedBlue-CardBG: rgba(225,225,225, 0.2);
-    --desaturatedBlue-Text: hsl(228, 34%, 66%);
-    --white-Text: hsl(0, 0%, 100%);
-    --lightGray: hsl(164, 45%, 94%);
-    --grayishWhite: hsl(0, 0%, 85%);
+:root {
+  --veryDarkBlue-BG: hsl(213, 73%, 15%);
+  --veryDarkBlue-TopBGPattern: hsl(240, 28%, 14%);
+  --darkDesaturatedBlue-CardBG: rgba(225, 225, 225, 0.2);
+  --desaturatedBlue-Text: hsl(228, 34%, 66%);
+  --white-Text: hsl(0, 0%, 100%);
+  --lightGray: hsl(164, 45%, 94%);
+  --grayishWhite: hsl(0, 0%, 85%);
+  --purplishBlue: hsl(250, 94%, 66%);
 
-    /* Icons */    
-    --githubIcon: hsl(0, 0%, 96%);
-    --githubIcon-hover: hsl(0, 0%, 76%);
-    --linkedinIcon : hsl(196, 100%, 43%);
-    --linkedinIcon-hover:  hsl(196, 100%, 33%);
+  /* Icons */
+  --githubIcon: hsl(0, 0%, 96%);
+  --githubIcon-hover: hsl(0, 0%, 76%);
+  --linkedinIcon: hsl(196, 100%, 43%);
+  --linkedinIcon-hover: hsl(196, 100%, 33%);
 }
