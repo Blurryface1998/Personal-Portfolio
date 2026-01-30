@@ -1,299 +1,329 @@
 @use "../util" as *;
 
 .header {
-    padding: rem(15) rem(10);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--veryDarkBlue-TopBGPattern);
+  padding: rem(15) rem(10);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--veryDarkBlue-TopBGPattern);
 
-    @include breakpoint(medium) {
-        flex-direction: row-reverse;
+  @include breakpoint(medium) {
+    flex-direction: row-reverse;
+  }
+
+  &__image {
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: rem(8);
+
+      @include breakpoint(medium) {
+        margin-left: rem(15);
+      }
     }
-    
-    &__image {
-        img {
-            max-width: 100%;
-            height: auto;
-            border-radius: rem(8);
+  }
 
-            @include breakpoint(medium) {
-                margin-left: rem(15);
-            }
-        }
+  &__descript {
+    padding-left: rem(10);
+    text-align: start;
+
+    @include breakpoint(large) {
+      padding-left: 0;
+      text-align: right;
     }
 
-    &__descript {
-        padding-left: rem(10);
-        text-align: start;
-
-        @include breakpoint(large) {
-            padding-left: 0;
-            text-align: right;
-        }
-
-        h1 {
-            font-size: rem(20);
-            color: var(--lightGray);
-        }
-
-        span {
-            font-size: rem(16);
-            color: var(--grayishWhite);
-        }
+    h1 {
+      font-size: rem(20);
+      color: var(--lightGray);
     }
+
+    span {
+      font-size: rem(16);
+      color: var(--grayishWhite);
+    }
+  }
 }
 
 .main {
+  @include breakpoint(medium) {
+    margin: rem(25);
+    width: 90%;
+    margin: auto;
+  }
 
-    @include breakpoint(medium) {
-        margin: rem(25);
-        width: 90%;
-        margin: auto;
-    }
+  .card {
+    margin: rem(10);
 
-    .card {
-        margin: rem(10);
-
-        &__about {
-            
-          
-            &--aboutMe{
-                h2 {
-                    margin-bottom: rem(15);
-                    color: var(--lightGray);
-                }
-    
-                p {
-                    font-size: rem(16);
-                    line-height: 1.6;
-                    color: var(--grayishWhite);
-                    margin-bottom: rem(10);
-
-                    a {
-                        color: var(--grayishWhite);
-
-                        &:hover {
-                            color: blue;
-                        }
-                    }
-                }
-            }
-
-            
+    &__about {
+      &--aboutMe {
+        h2 {
+          margin-bottom: rem(15);
+          color: var(--lightGray);
         }
 
-        &__projects {
-            
-            h3 {
-                margin-block: rem(15);  
-                color: var(--lightGray);
-                font-size: rem(20);
+        p {
+          font-size: rem(16);
+          line-height: 1.6;
+          color: var(--grayishWhite);
+          margin-bottom: rem(10);
+
+          a {
+            color: var(--grayishWhite);
+
+            &:hover {
+              color: blue;
             }
-
-            &--projects {
-                display: flex;
-                flex-wrap: wrap;
-                align-items: center;
-                
-
-                
-                @include breakpoint(medium) {
-                    align-items: center;
-                    border-radius: rem(10);
-                    padding: rem(15);
-                    box-shadow: 0px 5px 20px 0px rgba(255, 255, 255, 0.127);
-                    background-color: var(--darkDesaturatedBlue-CardBG);
-                }
-                    
-                .container {
-                    margin-bottom: rem(15);
-                    flex: 50%;
-                    max-width: 50%;
-                    padding: 0 rem(8);
-                
-                    @include breakpoint(medium) {
-                        position: relative;
-                        flex: 33.33%;
-                        max-width: 33.33%;
-                        margin-bottom: 0;
-                        padding-right: rem(8);
-                        transition: transform 0.3s ease;
-                        
-                       &:hover {
-                            z-index: 1;
-                            transform: scale(1.08);
-                        } 
-                       
-                    }
-                    
-                    a {
-                        text-decoration: none;
-
-                        img {
-                            max-width: 100%;
-                            height: auto;
-                            margin-top: rem(8);
-                            box-shadow: 0px -10px 20px -5px #000000;
-                            border-top-left-radius: rem(5);
-                            border-top-right-radius: rem(5);
-                            
-                            @include breakpoint(medium) {
-                                border-radius: rem(5);
-                                box-shadow: none;
-                                flex-shrink: 0;
-                                transition: all 0.3s ease;
-
-                                &:hover {
-                                    box-shadow: 0px 5px 20px 0px #000000;
-                                }
-                            }
-                        }
-
-                        @include breakpoint(medium) {
-                            
-                            &:hover + .descript {
-                                opacity: 1;
-                          
-                            }
-                        }
-                          
-                    }
-
-                    .descript {
-                        padding: rem(5);
-                        margin-top: rem(-4);
-                        text-align: center;
-                        font-size: rem(14);
-                        border-bottom-left-radius: rem(5);
-                        border-bottom-right-radius: rem(5);
-                        background-color: var(--darkPurple);
-                        color: var(--white-Text);
-                        z-index: 1;
-                        box-shadow: 0px 0px 20px 2px #000000;
-                        
-                        @include breakpoint(medium) {
-                            position: absolute;
-                            bottom: 4px;
-                            width: calc(100% - 16px);
-                            height: 40px;
-                            font-size: rem(16);
-                            padding: 0;
-                            background-color: rgba(0, 0, 0, 0.5);
-                            opacity: 0;
-                            transition: opacity 0.3s ease;
-                            pointer-events: none;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            box-shadow: none;
-                            
-                        }
-                    }
-                }
-            }
+          }
         }
+      }
     }
+
+    &__skills {
+      width: 100%;
+      margin-block: rem(20);
+
+      h2 {
+        margin-bottom: rem(15);
+        color: var(--lightGray);
+        font-size: rem(20);
+      }
+
+      &__grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        @include breakpoint(medium) {
+          justify-content: start;
+          flex-direction: row;
+        }
+
+        .skill-card {
+          width: rem(210);
+          background-color: var(--purplishBlue);
+          color: var(--grayishWhite);
+          padding: rem(16);
+          border-radius: rem(10);
+          margin: rem(15);
+          @include breakpoint(medium) {
+            margin: rem(5);
+          }
+
+          .icon {
+            max-width: rem(41);
+            height: rem(41);
+          }
+          .title {
+            color: var(--veryDarkBlue-TopBGPattern);
+            margin-block: rem(8);
+          }
+
+          .level {
+            font-size: rem(14);
+          }
+        }
+      }
+    }
+
+    &__projects {
+      h3 {
+        margin-block: rem(15);
+        color: var(--lightGray);
+        font-size: rem(20);
+      }
+
+      &--projects {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+
+        @include breakpoint(medium) {
+          align-items: center;
+          border-radius: rem(10);
+          padding: rem(15);
+          box-shadow: 0px 5px 20px 0px rgba(255, 255, 255, 0.127);
+          background-color: var(--darkDesaturatedBlue-CardBG);
+        }
+
+        .container {
+          margin-bottom: rem(15);
+          flex: 50%;
+          max-width: 50%;
+          padding: 0 rem(8);
+
+          @include breakpoint(medium) {
+            position: relative;
+            flex: 33.33%;
+            max-width: 33.33%;
+            margin-bottom: 0;
+            padding-right: rem(8);
+            transition: transform 0.3s ease;
+
+            &:hover {
+              z-index: 1;
+              transform: scale(1.08);
+            }
+          }
+
+          a {
+            text-decoration: none;
+
+            img {
+              max-width: 100%;
+              height: auto;
+              max-height: rem(250);
+              margin-top: rem(8);
+              box-shadow: 0px -10px 20px -5px #000000;
+              border-top-left-radius: rem(5);
+              border-top-right-radius: rem(5);
+
+              @include breakpoint(medium) {
+                border-radius: rem(5);
+                box-shadow: none;
+                flex-shrink: 0;
+                transition: all 0.3s ease;
+
+                &:hover {
+                  box-shadow: 0px 5px 20px 0px #000000;
+                }
+              }
+            }
+
+            @include breakpoint(medium) {
+              &:hover + .descript {
+                opacity: 1;
+              }
+            }
+          }
+
+          .descript {
+            padding: rem(5);
+            margin-top: rem(-4);
+            text-align: center;
+            font-size: rem(14);
+            border-bottom-left-radius: rem(5);
+            border-bottom-right-radius: rem(5);
+            background-color: var(--darkPurple);
+            color: var(--white-Text);
+            z-index: 1;
+            box-shadow: 0px 0px 20px 2px #000000;
+
+            @include breakpoint(medium) {
+              position: absolute;
+              bottom: 4px;
+              width: calc(100% - 16px);
+              height: 40px;
+              font-size: rem(16);
+              padding: 0;
+              background-color: rgba(0, 0, 0, 0.5);
+              opacity: 0;
+              transition: opacity 0.3s ease;
+              pointer-events: none;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              box-shadow: none;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 .footer {
-    position: relative;
-    padding: rem(15) rem(10);
-    background-color: var(--veryDarkBlue-TopBGPattern);
+  position: relative;
+  padding: rem(15) rem(10);
+  background-color: var(--veryDarkBlue-TopBGPattern);
 
-    
+  @include breakpoint(medium) {
+    height: 160px;
+  }
+
+  &__goto {
+    margin-left: rem(15);
+
     @include breakpoint(medium) {
-       height: 160px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
 
-    &__goto {
-        margin-left: rem(15);
+    ul {
+      color: var(--white-Text);
+      li {
+        margin-top: rem(10);
+        margin-bottom: rem(15);
 
-        
-        @include breakpoint(medium) {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+        a {
+          color: var(--white-Text);
+          text-decoration: none;
+          font-size: rem(18);
+        }
+      }
+    }
+  }
+
+  &__social {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: rem(15);
+    padding: rem(10);
+    text-align: end;
+
+    @include breakpoint(medium) {
+      margin-top: rem(25);
+    }
+
+    .links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      a {
+        text-decoration: none;
+        color: var(--white-Text);
+        margin-inline: rem(5);
+
+        span {
+          font-size: rem(20);
+          transition: all 0.2s ease;
         }
 
-        ul {
-            color: var(--white-Text);    
-            li {
-                margin-top: rem(10);
-                margin-bottom: rem(15);
-                
-                a {
-                    color: var(--white-Text);
-                    text-decoration: none;
-                    font-size: rem(18);
-                    
-                }
+        .bi-github {
+          color: var(--githubIcon);
+
+          @include breakpoint(medium) {
+            &:hover {
+              color: var(--githubIcon-hover);
             }
+          }
         }
-    }
-    
-    &__social {
-        position: absolute;
-        top: 0;
-        right: 0;
-        margin-top: rem(15);
-        padding: rem(10);
-        text-align: end;
 
-        @include breakpoint(medium) {
-            margin-top: rem(25);
-        }
-    
-        .links {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            a {
-                text-decoration: none;
-                color: var(--white-Text);
-                margin-inline: rem(5);
-    
-                span {
-                    font-size: rem(20);
-                    transition: all 0.2s ease;
-                }
-    
-                .bi-github {
-                    color: var(--githubIcon);
-                    
-                    @include breakpoint(medium) {
-                        
-                        &:hover {
-                            color: var(--githubIcon-hover);
-                        }
-                    }
-                }
-    
-                .bi-linkedin {
-                    color: var(--linkedinIcon);
-    
-                    @include breakpoint(medium) {
-                        &:hover {
-                            color: var(--linkedinIcon-hover);
-                        }
-                    }
-                }
-                
-                img {
-                    vertical-align: middle;
-                }
+        .bi-linkedin {
+          color: var(--linkedinIcon);
+
+          @include breakpoint(medium) {
+            &:hover {
+              color: var(--linkedinIcon-hover);
             }
+          }
         }
-    }
 
-    &__copy {
-       position: absolute;
-       bottom: 0;
-       right: 0;
-       padding-bottom: rem(10);
-       padding-right: rem(10);
-       color: var(--desaturatedBlue-Text);
-       font-size: rem(14);
+        img {
+          vertical-align: middle;
+        }
+      }
     }
+  }
+
+  &__copy {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding-bottom: rem(10);
+    padding-right: rem(10);
+    color: var(--desaturatedBlue-Text);
+    font-size: rem(14);
+  }
 }
