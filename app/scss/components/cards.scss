@@ -91,14 +91,18 @@
       &__grid {
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        align-items: center;
+
         @include breakpoint(medium) {
+          align-items: center;
           justify-content: start;
           flex-direction: row;
         }
 
         .skill-card {
-          width: rem(210);
+          flex: 33.33%;
+          width: 50%;
+          max-width: 210px;
           background-color: var(--purplishBlue);
           color: var(--grayishWhite);
           padding: rem(16);
@@ -119,6 +123,7 @@
 
           .level {
             font-size: rem(14);
+            color: var(--lightGray);
           }
         }
       }
@@ -286,7 +291,7 @@
         margin-inline: rem(5);
 
         span {
-          font-size: rem(20);
+          font-size: rem(28);
           transition: all 0.2s ease;
         }
 
@@ -312,6 +317,8 @@
 
         img {
           vertical-align: middle;
+          width: rem(28);
+          height: rem(28);
         }
       }
     }

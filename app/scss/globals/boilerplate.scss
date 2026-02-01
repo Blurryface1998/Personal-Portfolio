@@ -1,17 +1,29 @@
 @use "../util" as *;
 
 html {
-    font-size: 100%;
-    box-sizing: border-box;
+  font-size: 100%;
+  box-sizing: border-box;
 }
 
-*, *::before, *::after {
-    box-sizing: inherit;
-    margin: 0;
-    padding: 0;
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: rem(20);
+  letter-spacing: rem(2.4);
 }
 
 body {
-    font-family: var( --font-Inter);
-    background-color: var(--veryDarkBlue-BG);
+  font-family: var(--font-Inter);
+  background-color: var(--veryDarkBlue-BG);
 }
